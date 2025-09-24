@@ -16,8 +16,7 @@ int main() {
     pipe(fd); /* Creating pipe for intercomunication. We will use fd[0] for reading and fd[1] for writing */
     child_p = fork();
 
-    switch (child_p)
-    {
+    switch (child_p) {
     case -1:
         printf("An error occurred");
         break;
@@ -33,7 +32,7 @@ int main() {
         /* Back to the father (main) process */
         close(fd[1]);
         waitpid(child_p, &child_status, 0);
-        
+
         read(fd[0], buffer, sizeof(buffer));
         printf("El pare rep del fill: %s", buffer);
         break;
