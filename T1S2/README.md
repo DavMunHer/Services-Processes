@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
 }
 ```
 
+It's important to note that in this example we are currenly using **multiprogramming** (Single CPU, same core), not ~~paralelism~~ (Single CPU but one process in one core and the other one in the other) in the context of concurrency.
+
+
 ## Interesting data
 Since we are running this from the bash, we can see that the father process is the child of the bash process itself. We can check this by running `pgrep bash`. This will return the pid of the bash, which is the same as the parent process id displayed in the last `printf` of the above script.
 
