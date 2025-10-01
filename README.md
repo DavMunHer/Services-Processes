@@ -11,7 +11,7 @@ Table of contents:
 | Content                              | Markdown File |
 |:------------------------------------:|:-------------:|
 | Duplicated processes - Fork()        | [fork()](https://github.com/DavMunHer/Services-Processes/blob/main/T1S2/README.md)              |
-|                                      |                |
+| Sharing info between processes       | [pipe() & FIFOs](https://github.com/DavMunHer/Services-Processes/blob/main/T1S3/ProcessCommunication.md)               |
 
 
 ### How to run the different C files?
