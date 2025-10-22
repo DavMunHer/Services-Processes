@@ -15,8 +15,7 @@ public class Client extends Thread {
     public void run() {
         if (!this.cadiresEspera.isFull()) {
             this.cadiresEspera.ocuparCadira(this.clientId);
-//            this.butacaBarber.wakeUpBarber();
-            butacaBarber.useButaca(this.clientId);
+            this.butacaBarber.wakeUpBarber(this.clientId);
             this.cadiresEspera.lliberarCadira();
         } else {
             System.out.println("-> Client" + this.clientId + " SE VA DE LA BARBERIA");

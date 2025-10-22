@@ -1,38 +1,37 @@
 package org.example.Threads.Sychronized.WaitAndNotify.Barber;
 
 public class ButacaBarber {
-    private boolean occupied;
     private int currentClientId;
+    private boolean isOccupied;
 
     public ButacaBarber() {
-        this.occupied = false;
+        this.isOccupied = false;
     }
 
-    public synchronized void useButaca(int clientId) {
+
+    public synchronized void cutHair() {
         try {
             this.wait();
+            this.isOccupied = true;
+            this.wait(2000);
         } catch (InterruptedException e) {
         }
-        this.occupied = true;
-        this.currentClientId = clientId;
-        System.out.println("-> Client" + clientId + " seu en la BUTACA");
-    }
-
-    public synchronized void freeButaca() {
-        this.occupied = false;
         System.out.println("-> Barber ha tallat el cabell a " + this.currentClientId);
-        this.notify();
+        this.isOccupied = false;
+        this.notifyAll();
     }
 
-    public synchronized boolean isOccupied() {
-        return this.occupied;
-    }
 
-    public synchronized void callNextClient() {
-        this.notify();
-    }
-
-    public synchronized void wakeUpBarber() {
+    public synchronized void wakeUpBarber(int clientId) {
+        while (isOccupied) {
+            try {
+                System.out.println("-> Client"+ clientId +" ha intentat seure en BUTACA pero no pot.");
+                this.wait();
+            } catch (InterruptedException e) {
+            }
+        }
+        this.currentClientId = clientId;
+        System.out.println("-> Client" + this.currentClientId + " seu en la BUTACA");
         this.notify();
     }
 
