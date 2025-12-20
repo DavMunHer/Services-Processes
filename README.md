@@ -13,6 +13,8 @@ Table of contents:
 | Duplicated processes - Fork()        | [fork()](https://github.com/DavMunHer/Services-Processes/blob/main/T1S2/README.md)              |
 | Sharing info between processes       | [pipe() & FIFOs](https://github.com/DavMunHer/Services-Processes/blob/main/T1S3/ProcessesCommunication.md)               |
 
+For all the content in Java (most of this subject), please refer to [this](https://github.com/DavMunHer/Services-Processes/blob/main/UsageInJava/README.md) README file
+
 
 ### How to run the different C files?
 For running all the different `C` files, you will first need to install the `gcc` compiler. For doing this:
