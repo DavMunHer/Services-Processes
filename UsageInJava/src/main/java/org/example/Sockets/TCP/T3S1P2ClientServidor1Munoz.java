@@ -3,7 +3,6 @@ package org.example.Sockets.TCP;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
 
 class Client {
     private static final int SERVER_PORT = 5000;
@@ -15,19 +14,29 @@ class Client {
             DataInputStream inputFlow = new DataInputStream(is);
             OutputStream os = socket.getOutputStream();
             DataOutputStream outputFlow = new DataOutputStream(os);
-            Scanner kb = new Scanner(System.in);
 
-            while (true) {
+            for (int i = 0; i < 3; i++) {
                 System.out.println("Servidor: " + inputFlow.readUTF());
-                System.out.print("> ");
-                String msg = kb.nextLine();
+                String msg = "";
+                switch (i) {
+                    case 0:
+                        msg = "Hola";
+                        break;
+                    case 1:
+                        msg = "¿Com estas?";
+                        break;
+                    case 2:
+                        msg = "Adeu";
+                        break;
+                }
+                System.out.println(msg);
                 outputFlow.writeUTF(msg);
                 if (msg.equals("Adeu")) {
                     System.out.println("Servidor: " + inputFlow.readUTF());
                     break;
                 }
-
             }
+
 
             inputFlow.close();
             socket.close();
