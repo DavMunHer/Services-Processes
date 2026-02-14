@@ -43,6 +43,18 @@ For running all the different `C` files, you will first need to install the `gcc
           gcc path/to/T1S2P2TresGeneracions.c -o output/path/T1S2P2TresGeneracions && output/path/T1S2P2TresGeneracions
         ```
 
+## Contributing
+This project is open source and contributions are very welcome! If you'd like to contribute, feel free to open a Pull Request.
+
+**How to submit a PR:**
+1. Fork the repository
+2. Create a new branch for your changes: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them with a descriptive message: `git commit -m "Add: your change description"`
+4. Push your branch to your fork: `git push origin feature/your-feature-name`
+5. Open a Pull Request against the `main` branch of this repository
+
+All PRs will be reviewed and merged as soon as possible. Thanks for helping improve this project!
+
 ## Author
 > DavMunHer - [@LinkedIn](https://linkedin.com/in/DavMunHer) · [@GitHub](https://github.com/davmunher)
 
