@@ -13,7 +13,7 @@ Table of contents:
 | Duplicated processes - Fork()        | [fork()](https://github.com/DavMunHer/Services-Processes/blob/main/T1S2/README.md)              |
 | Sharing info between processes       | [pipe() & FIFOs](https://github.com/DavMunHer/Services-Processes/blob/main/T1S3/ProcessesCommunication.md)               |
 
-For all the content in Java (most of this subject), please refer to [this](https://github.com/DavMunHer/Services-Processes/blob/main/UsageInJava/README.md) README file
+For all the content in Java (most of this subject), please refer to [this](./UsageInJava/README.md) README file
 
 
 ### How to run the different C files?
