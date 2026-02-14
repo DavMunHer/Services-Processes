@@ -8,5 +8,6 @@ Table of contents:
 
 |        Content         |                                                        Markdown File                                                         |
 |:----------------------:|:----------------------------------------------------------------------------------------------------------------------------:|
-|     Multithreading     |  [MultiThreading](https://github.com/DavMunHer/Services-Processes/tree/main/UsageInJava/src/main/java/org/example/Threads/)  |
-| Network Communications |     [Sockets](https://github.com/DavMunHer/Services-Processes/tree/main/UsageInJava/src/main/java/org/example/Sockets/)      |
+|     Multithreading     |  [MultiThreading](./src/main/java/org/example/Threads/)  |
+| Network Communications |     [Sockets](./src/main/java/org/example/Sockets/)      |
+| Safe programming |     [Hashing](./src/main/java/org/example/SaveProgramming/)      |
